@@ -5,14 +5,14 @@ import {db } from "@/lib/db";
 export const initialProfile = async () => {
     const user = await currentUser();
     if (!user) {
-        redirectToSignIn();
-        return;
+        return  redirectToSignIn();
+        
     }
 
     const profile = await db.profile.findUnique({
         where: {
-            userId: user.id,
-        },
+            userId: user.id
+        }
     });
 
     if (profile) {
