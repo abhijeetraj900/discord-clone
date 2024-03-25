@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning >
-        <body className={cn(font.className,"bg-white dark:-[#313338]")}>
+        <body className={cn(font.className," dark:[#313338] ")}>
           <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem={true}
+          enableSystem={false}
           storageKey="discord-theme"
           >
             <ModalProvider/>
